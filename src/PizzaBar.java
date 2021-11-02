@@ -35,6 +35,8 @@ public class PizzaBar {
                     ui.farvelBesked();
                     break;
 
+                    break;
+
                 default:
                     System.out.println("Dette er ikke en mulighed");
 
