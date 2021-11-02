@@ -13,12 +13,10 @@ public class PizzaBar {
 
         while (startGo) {
             String input = sc.nextLine();
-
-
             switch (input) {
-
                 case "1":
-                    menu.printeUd();
+                    System.out.println("case 1");
+                    menu.getMenu();
                     break;
                 case "2":
 

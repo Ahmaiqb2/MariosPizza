@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class Menu {
     private ArrayList<Pizza> pizzaMenu = new ArrayList<>();
     //Pizza 1: Number, 2: Name, 3: ingredients, 4: price
+
+    public Menu(){
+        createMenu();
+    }
+
     public void createMenu() {
         File file = new File("data/menu.txt");
         try {
@@ -17,9 +22,13 @@ public class Menu {
             System.out.println("oof" + e);
         }
     }
-
     public ArrayList<Pizza> getPizzas() {
         return pizzaMenu;
+    }
+    public void getMenu(){
+        for(int i = 0; i < pizzaMenu.size(); i++){
+            System.out.println(pizzaMenu.get(i));
+        }
     }
     private void addPizza(String pizza){
         String[] stringList = pizza.split("_");
