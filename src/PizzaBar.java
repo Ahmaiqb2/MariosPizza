@@ -7,10 +7,11 @@ public class PizzaBar {
 
     public void run() {
         boolean startGo = true;
+        ui.startsMenu();
 
         while (startGo) {
             String input = sc.nextLine();
-            ui.startsMenu();
+
 
             switch (input) {
 
@@ -21,6 +22,12 @@ public class PizzaBar {
                 case "3":
 
                 case "4":
+
+                case "9":
+                    ui.farvelBesked();
+
+                default:
+                    System.out.println("Dette er ikke en mulighed");
 
             }
         }
