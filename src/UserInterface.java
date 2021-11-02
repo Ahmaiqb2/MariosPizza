@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class UserInterface {
+
+    Scanner sc = new Scanner(System.in);
 
     public void velkomstBesked(){
         System.out.println("""
@@ -8,9 +12,10 @@ public class UserInterface {
 
     public void startsMenu(){
         System.out.println("""
-                1: Se menu:
-                2: Bestil pizza:
-                9: For exit""");
+                1: Se Menu:
+                2: Bestil Pizza:
+                3: Se Bestillinger:
+                9: For Exit:""");
     }
 
     public void farvelBesked(){

@@ -36,8 +36,7 @@ public class Pizza {
         return pizzaPris;
     }
 
-
-
+    @Override
     public String toString(){
         return pizzaNummer + " " + pizzaNavn + " " + pizzaBeskrivelse + " " + pizzaPris;
     }
