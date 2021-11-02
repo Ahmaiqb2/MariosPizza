@@ -3,9 +3,9 @@ public class Pizza {
     private int pizzaNummer;
     private String pizzaNavn;
     private String pizzaBeskrivelse;
-    private int pizzaPris;
+    private double pizzaPris;
 
-    public Pizza(int pizzaNummer, String pizzaNavn, String pizzaBeskrivelse, int pizzaPris){
+    public Pizza(int pizzaNummer, String pizzaNavn, String pizzaBeskrivelse, double pizzaPris){
         this.pizzaNummer = pizzaNummer;
         this.pizzaNavn = pizzaNavn;
         this.pizzaBeskrivelse = pizzaBeskrivelse;
@@ -32,7 +32,7 @@ public class Pizza {
         return pizzaBeskrivelse;
     }
 
-    public int getPizzaPris() {
+    public double getPizzaPris() {
         return pizzaPris;
     }
 
