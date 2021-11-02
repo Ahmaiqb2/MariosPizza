@@ -4,6 +4,7 @@ public class UserInterface {
         System.out.println("""
                 Tryk 1: Se menu:
                 Tryk 2: Bestil pizza:
+                Tryk 3: 
                 """);
     }
 }

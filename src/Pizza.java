@@ -16,6 +16,14 @@ public class Pizza {
         return pizzaNummer;
     }
 
+    public void setPizzaNavn(String pizzaNavn) {
+        this.pizzaNavn = pizzaNavn;
+    }
+
+    public void setPizzaBeskrivelse(String pizzaBeskrivelse) {
+        this.pizzaBeskrivelse = pizzaBeskrivelse;
+    }
+
     public String getPizzaNavn() {
         return pizzaNavn;
     }
@@ -27,4 +35,11 @@ public class Pizza {
     public int getPizzaPris() {
         return pizzaPris;
     }
+
+
+
+    public String toString(){
+        return pizzaNummer + " " + pizzaNavn + " " + pizzaBeskrivelse + " " + pizzaPris;
+    }
+
 }
