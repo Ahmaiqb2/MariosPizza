@@ -8,6 +8,7 @@ public class PizzaBar {
 
     public void run() {
         boolean startGo = true;
+        ui.velkomstBesked();
         ui.startsMenu();
 
         while (startGo) {

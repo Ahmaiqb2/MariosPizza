@@ -1,10 +1,16 @@
 public class UserInterface {
 
+    public void velkomstBesked(){
+        System.out.println("""
+                Velkommen til Marios Pizza!
+                """);
+    }
+
     public void startsMenu(){
         System.out.println("""
-                Tryk 1: Se menu:
-                Tryk 2: Bestil pizza:
-                Tryk 9: For exit""");
+                1: Se menu:
+                2: Bestil pizza:
+                9: For exit""");
     }
 
     public void farvelBesked(){
