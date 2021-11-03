@@ -24,7 +24,11 @@ public class Order {
     }
 
     public void finishOrder() throws FileNotFoundException {
-        String order = "";
+        String order = pris + "_Pizzaer: ";
+        for(int i = 0; i < pizzaer.size(); i++){
+            order += pizzaer.get(i).getPizzaNavn() + ", ";
+        }
+        order += pris;
         File file = new File("data/orderHistory.txt");
         PrintStream ps = new PrintStream(new FileOutputStream(file, true));
         ps.println(order);
