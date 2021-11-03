@@ -41,7 +41,10 @@ public class Menu {
     }
 
     public void menuIndhold() {
-        pizza = new ArrayList<>();
+        for (Pizza pizza1 : pizza = new ArrayList<>()) {
+            
+        }
+
         Pizza pizza1 = new Pizza(1, "Vesuvio:",
                 "tomatsauce, ost, skinke og oregano", 57);
         Pizza pizza2 = new Pizza(2, "Amerikaner",
