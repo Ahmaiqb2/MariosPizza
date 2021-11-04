@@ -5,7 +5,6 @@ public class PizzaBar {
     private Scanner sc = new Scanner(System.in);
     private UserInterface ui = new UserInterface();
     private Menu menu = new Menu();
-    private Order order = new Order();
     private ListeAfOrdre listeAfOrdre = new ListeAfOrdre();
 
     public void start() {
@@ -17,14 +16,13 @@ public class PizzaBar {
             int selection = sc.nextInt();
             sc.nextLine();
             switch (selection) {
-
                 case 1:
                     ui.menuBesked();
                     //menu.getMenu();
                     menu.printMenu();
                     break;
                 case 2:
-                    listeAfOrdre.addPizzaToOrder();
+                    listeAfOrdre.addPizzaOrder();
                     break;
                 case 3:
                     listeAfOrdre.printListeAfOrdre();

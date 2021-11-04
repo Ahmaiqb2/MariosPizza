@@ -12,10 +12,28 @@ public class Order {
 
     private ArrayList<Pizza> pizzaer = new ArrayList<>();
     private double pris = 0;
+    private String henteTidspunkt;
     Menu menu = new Menu();
 
+    public Order(ArrayList<Pizza> pizzaer, String henteTidspunkt){
+        this.pizzaer=pizzaer;
+        this.henteTidspunkt=henteTidspunkt;
+        setPrice();
+    }
 
-   public void addPizza(int pizzaNummer){
+    private void setPrice(){
+        double price = 0;
+        for(int i = 0; i < pizzaer.size(); i++){
+            price += pizzaer.get(i).getPizzaPris();
+        }
+        this.pris=price;
+    }
+
+    public double getPris() {
+        return pris;
+    }
+
+    public void addPizza(int pizzaNummer){
         pizzaer.add(menu.getPizza().get(pizzaNummer - 1));
    }
 
@@ -32,5 +50,19 @@ public class Order {
         File file = new File("data/orderHistory.txt");
         PrintStream ps = new PrintStream(new FileOutputStream(file, true));
         ps.println(order);
+    }
+    private String pizzaList(){
+        String pizza = "";
+        for(int i = 0; i < pizzaer.size(); i++){
+            pizza += "Nr. " + pizzaer.get(i).getPizzaNummer() + " - " + pizzaer.get(i).getPizzaNavn() + ", pris: " + pizzaer.get(i).getPizzaPris() + "kr.";
+            if(i < pizzaer.size()){
+                pizza += "\n";
+            }
+        }
+        return pizza;
+    }
+
+    public String toString(){
+        return pizzaList() + "afhentes: " + henteTidspunkt;
     }
 }

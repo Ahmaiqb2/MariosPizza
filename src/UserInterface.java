@@ -7,7 +7,6 @@ public class UserInterface {
 
     private UserInterface ui;
     private Menu menu = new Menu();
-    private Order order = new Order();
     private ListeAfOrdre listeAfOrdre = new ListeAfOrdre();
 
     //private PizzaBar application;
