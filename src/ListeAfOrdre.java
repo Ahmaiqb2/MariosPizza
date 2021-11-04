@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -63,9 +64,15 @@ public class ListeAfOrdre {
         return null;
     }
 
-    public void removePizzaFromOrder(){
-        System.out.println("Hvilken pizza skal fjernes");
+    public void removeOrder(Order order){
+        listeAfOrdre.remove(order);
     }
+
+    public void finishOrder(Order order) throws FileNotFoundException {
+        order.finishOrder();
+        removeOrder(order);
+    }
+
     public void printListeAfOrdre(){
         if (getListeAfOrdre().size() == 0){
             System.out.println("Der er ingen bestillinger");
