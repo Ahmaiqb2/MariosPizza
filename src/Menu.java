@@ -26,8 +26,8 @@ public class Menu {
     }
 
     public void getMenu() {
-        for (int i = 0; i < pizzaMenu.size(); i++) {
-            System.out.println(pizzaMenu.get(i));
+        for (int i = 0; i < pizza.size(); i++) {
+            System.out.println(pizza.get(i));
         }
     }
 
@@ -41,8 +41,8 @@ public class Menu {
     }
 
     public void menuIndhold() {
-        for (Pizza pizza1 : pizza = new ArrayList<>()) {
-            
+        for (Pizza marios: pizza = new ArrayList<>()) {
+
         }
 
         Pizza pizza1 = new Pizza(1, "Vesuvio:",
