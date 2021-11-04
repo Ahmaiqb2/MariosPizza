@@ -27,6 +27,10 @@ public class ListeAfOrdre {
         }
     }
 
+    public void removePizzaFromOrder(){
+        System.out.println("Hvilken pizza skal fjernes");
+    }
+
 
     public void printListeAfOrdre(){
         if (getListeAfOrdre().size() == 0){

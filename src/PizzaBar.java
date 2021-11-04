@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class PizzaBar {
 
     private Scanner sc = new Scanner(System.in);
-    private UserInterface ui = new UserInterface();
+    private UserInterface ui;
     private Menu menu = new Menu();
     private Order order = new Order();
     private ListeAfOrdre listeAfOrdre = new ListeAfOrdre();
 
     public void run() {
         boolean startGo = true;
-        ui.velkomstBesked();
-        ui.startsMenu();
+        //ui.velkomstBesked();
+        //ui.startsMenu();
 
         while (startGo) {
             String input = sc.nextLine();
@@ -35,7 +35,7 @@ public class PizzaBar {
                     break;
 
                 case "9":
-                    ui.farvelBesked();
+                    //ui.farvelBesked();
                     break;
 
                 default:

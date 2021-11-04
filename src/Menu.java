@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
-    private ArrayList<Pizza> pizza = new ArrayList<>();
-    private ArrayList<Pizza> pizzaMenu = new ArrayList<>();
+    public ArrayList<Pizza> pizza = new ArrayList<>();
+    public ArrayList<Pizza> pizzaMenu = new ArrayList<>();
     //Pizza 1: Number, 2: Name, 3: ingredients, 4: price
 
     public Menu() {
@@ -82,12 +82,12 @@ public class Menu {
         Pizza pizza18 = new Pizza(18, "White truffle",
                 "Mornaysauce, trøffelolie, pesto og hvidløg", 85);
         Pizza pizza19 = new Pizza(19, "Vegan",
-                " tomatsauce, veganCheez, likeMeat og oregano", 57);
+                " tomatsauce, veganCheese, likeMeat og oregano", 57);
         Pizza pizza20 = new Pizza(20, "Holger Danske",
                 "tomatsauce, ost, bacon, bernaisesauce og champingion", 63);
         Pizza pizza21 = new Pizza(21, "Thyborøn XL",
                 "tomatsauce, ost, rejer, tun, ansjoser og  basilikum", 85);
-        Pizza pizza22 = new Pizza(22, "Butter Chiken",
+        Pizza pizza22 = new Pizza(22, "Butter Chicken",
                 "Butterchikensauce, ost, persille og hvidløg", 57);
         Pizza pizza23 = new Pizza(23, "Sinbad",
                 "tomatsauce, ost, pepperoni, rød peber, løg, oliven, kebab og aubergine", 75);
@@ -97,7 +97,7 @@ public class Menu {
                 "tomatsauce, ost, skinke, bacon, chili og oregano", 61);
         Pizza pizza26 = new Pizza(26, "After Eight",
                 "tomatsauce, ost, skinke, bacon, kebab, champignon og oregano", 61);
-        Pizza pizza27 = new Pizza(27, "study time",
+        Pizza pizza27 = new Pizza(27, "Study time",
                 "tomatsauce, ost,kylling og oregano", 61);
         Pizza pizza28 = new Pizza(28, "Bella Mia",
                 "tomatsauce, ost, skinke, rejer og oregano", 61);
