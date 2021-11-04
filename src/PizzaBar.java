@@ -29,6 +29,8 @@ public class PizzaBar {
                 case 4:
                     //lav metode fjern ordre
                     break;
+                case 6:
+                    //statistik
                 case 5:
                     running = false;
                     break;

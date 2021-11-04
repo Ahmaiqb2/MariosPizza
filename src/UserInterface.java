@@ -30,6 +30,9 @@ public class UserInterface {
         System.out.println("Denne kommando findes ikke");
     }
 
+    public void statistik(){
+
+    }
     public void menuBesked(){
         System.out.println("MENU:");
     }

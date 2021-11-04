@@ -63,6 +63,6 @@ public class Order {
     }
 
     public String toString(){
-        return pizzaList() + "afhentes: " + henteTidspunkt;
+        return pizzaList() + "Afhentes: " + henteTidspunkt;
     }
 }

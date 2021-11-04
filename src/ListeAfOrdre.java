@@ -17,24 +17,25 @@ public class ListeAfOrdre {
     public void addPizzaOrder(){
         ArrayList<Pizza> pizzaOrder = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        System.out.println("tilføj pizzaer:");
+        System.out.println("Tilføj pizzaer:");
 
         boolean active = true;
         while(active){
-            System.out.print("indtast pizza nr: ");
+            System.out.print("Indtast pizza nr: ");
             String input = sc.nextLine();
 
             if(input.equalsIgnoreCase("menu")){
                 System.out.println(menu.getPizza());
             }
             else if(addPizza(input)==null){
-                System.out.println("denne pizza findes ikke");
+                System.out.println("Denne pizza findes ikke");
             } else {
                 pizzaOrder.add(addPizza(input));
+                System.out.println("Pizza nummer " + input + " er tilføjet til ordre.");
             }
             boolean choice = true;
             while(choice) {
-                System.out.println("Tilføj mere?");
+                System.out.println("Vil du tilføje mere? (ja/nej)");
                 String answer = sc.nextLine();
                 if (answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("ja")) {
                     choice = false;
@@ -43,11 +44,11 @@ public class ListeAfOrdre {
                     choice = false;
                     active = false;
                 } else {
-                    System.out.println("ugyldigt svar");
+                    System.out.println("Ugyldigt svar");
                 }
             }
         }
-        System.out.println("hvornår skal den hentes?");
+        System.out.println("Hvornår skal ordren hentes?");
         String pickupTime = sc.nextLine();
         listeAfOrdre.add(new Order(pizzaOrder, pickupTime));
     }
