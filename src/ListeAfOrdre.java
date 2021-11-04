@@ -16,14 +16,14 @@ public class ListeAfOrdre {
     }
 
     public void addPizzaToOrder(){
-        System.out.println("Hvilke Pizza ku du tænke dig?");
+        System.out.println("Hvilken pizza kunne du tænke dig?");
         String input = sc.nextLine();
         if (input.equalsIgnoreCase(String.valueOf(menu.getPizza()))){
             for (int i = 0; i < menu.getPizza().size(); i++){
                 order.addPizza(i);
             }
         } else {
-            System.out.println("Det findes ikke");
+            System.out.println(input + " findes ikke på menukortet");
         }
     }
 

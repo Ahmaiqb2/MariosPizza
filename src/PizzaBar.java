@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PizzaBar {
+public class PizzaBar {/*
 
     private Scanner sc = new Scanner(System.in);
     private UserInterface ui;
@@ -43,5 +43,5 @@ public class PizzaBar {
 
             }
         }
-    }
-}
+  */  }
+
