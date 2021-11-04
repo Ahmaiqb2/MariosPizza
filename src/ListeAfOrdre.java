@@ -15,10 +15,10 @@ public class ListeAfOrdre {
         listeAfOrdre.add(order);
     }
 
-    public void addPizzaToOrder(){
+   public void addPizzaToOrder(){
         System.out.println("Hvilken pizza kunne du tænke dig?");
         String input = sc.nextLine();
-        if (input.equalsIgnoreCase(String.valueOf(menu.getPizza()))){
+        if (input.equalsIgnoreCase(String.valueOf(menu.pizzaMenu))){
             for (int i = 0; i < menu.getPizza().size(); i++){
                 order.addPizza(i);
             }
@@ -30,7 +30,6 @@ public class ListeAfOrdre {
     public void removePizzaFromOrder(){
         System.out.println("Hvilken pizza skal fjernes");
     }
-
 
     public void printListeAfOrdre(){
         if (getListeAfOrdre().size() == 0){

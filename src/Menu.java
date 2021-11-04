@@ -140,11 +140,11 @@ public class Menu {
     }
 
 
-    /*public void printMenu(){
+    public void printMenu(){
         for (int i = 0; i < pizza.size(); i++){
             System.out.println(pizza.get(i));
         }
-    }*/
+    }
 
     public ArrayList<Pizza> getPizza() {
         return pizza;

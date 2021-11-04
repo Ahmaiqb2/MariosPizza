@@ -19,9 +19,6 @@ public class Order {
         pizzaer.add(menu.getPizza().get(pizzaNummer - 1));
    }
 
-
-
-
     public ArrayList<Pizza> getPizzaer() {
         return pizzaer;
     }
