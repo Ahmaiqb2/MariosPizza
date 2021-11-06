@@ -7,6 +7,7 @@ public class ListeAfOrdre {
     ArrayList<Order> listeAfOrdre = new ArrayList<>();
     Menu menu = new Menu();
     Scanner sc = new Scanner(System.in);
+    public static final String BLUE = "\u001B[34m";
 
     public ListeAfOrdre(){
     }
@@ -64,22 +65,24 @@ public class ListeAfOrdre {
         return null;
     }
 
-    public void removeOrder(Order order){
-        listeAfOrdre.remove(order);
+    public void removeOrder(int id){
+        listeAfOrdre.remove(id);
     }
 
-    public void finishOrder(Order order) throws FileNotFoundException {
+   /* public void finishOrder(Order order) throws FileNotFoundException {
         order.finishOrder();
-        removeOrder(order);
-    }
+        removeOrder(id);*/
+
 
     public void printListeAfOrdre(){
         if (getListeAfOrdre().size() == 0){
             System.out.println("Der er ingen bestillinger");
         } else {
-            for (int i = 0; i < getListeAfOrdre().size(); i++){
+            for (int i = 0; i < getListeAfOrdre().size(); i++) {
+                System.out.println("Ordre ID: " + i);
                 System.out.println(getListeAfOrdre().get(i));
                 System.out.println("Samlet pris: " + getListeAfOrdre().get(i).getPris() + "kr.");
+                System.out.println("Ordre ID: " + i);
             }
         }
     }
@@ -87,5 +90,8 @@ public class ListeAfOrdre {
     public ArrayList<Order> getListeAfOrdre() {
         return listeAfOrdre;
     }
-}
+
+
+    }
+
 

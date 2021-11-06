@@ -21,6 +21,8 @@ public class Order {
         setPrice();
     }
 
+
+
     private void setPrice(){
         double price = 0;
         for(int i = 0; i < pizzaer.size(); i++){

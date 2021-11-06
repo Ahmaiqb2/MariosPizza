@@ -6,6 +6,8 @@ public class PizzaBar {
     private UserInterface ui = new UserInterface();
     private Menu menu = new Menu();
     private ListeAfOrdre listeAfOrdre = new ListeAfOrdre();
+    //private Order order = new Order();
+    public static final String red = "\u001B[31m";
 
     public void start() {
         ui.printStartBesked();
@@ -13,12 +15,15 @@ public class PizzaBar {
         boolean running = true;
         while (running) {
             ui.printMenu();
+
+
             int selection = sc.nextInt();
             sc.nextLine();
+
             switch (selection) {
                 case 1:
                     ui.menuBesked();
-                    //menu.getMenu();
+
                     menu.printMenu();
                     break;
                 case 2:
@@ -26,12 +31,20 @@ public class PizzaBar {
                     break;
                 case 3:
                     listeAfOrdre.printListeAfOrdre();
-                case 4:
-                    //lav metode fjern ordre
                     break;
+                case 4:
+                    listeAfOrdre.printListeAfOrdre();
+                    System.out.println("\nHvilken ordre skal fjernes?");
+                    System.out.println("Indtast ordre ID");
+                    int remove = sc.nextInt();
+                    listeAfOrdre.removeOrder(remove);
+                    System.out.println("Ordre " + remove + " er fjernet fra ordrelisten");
+                    break;
+                case 5:
+                    //finishorder
                 case 6:
                     //statistik
-                case 5:
+                case 7:
                     running = false;
                     break;
 
