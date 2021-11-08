@@ -7,7 +7,7 @@ public class PizzaBar {
     private Menu menu = new Menu();
     private ListeAfOrdre listeAfOrdre = new ListeAfOrdre();
     //private Order order = new Order();
-    public static final String red = "\u001B[31m";
+
 
     public void start() {
         ui.printStartBesked();
@@ -36,9 +36,9 @@ public class PizzaBar {
                     listeAfOrdre.printListeAfOrdre();
                     System.out.println("\nHvilken ordre skal fjernes?");
                     System.out.println("Indtast ordre ID");
-                    int remove = sc.nextInt();
+                    int remove = sc.nextInt()-1;
                     listeAfOrdre.removeOrder(remove);
-                    System.out.println("Ordre " + remove + " er fjernet fra ordrelisten");
+                    System.out.println("Ordre " + (remove+1) + " er fjernet fra ordrelisten");
                     break;
                 case 5:
                     //finishorder

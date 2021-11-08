@@ -7,7 +7,8 @@ public class ListeAfOrdre {
     ArrayList<Order> listeAfOrdre = new ArrayList<>();
     Menu menu = new Menu();
     Scanner sc = new Scanner(System.in);
-    public static final String BLUE = "\u001B[34m";
+    public static final String GRØN = "\u001B[32m";
+    public static final String RESET = "\u001B[0m";
 
     public ListeAfOrdre(){
     }
@@ -79,10 +80,11 @@ public class ListeAfOrdre {
             System.out.println("Der er ingen bestillinger");
         } else {
             for (int i = 0; i < getListeAfOrdre().size(); i++) {
-                System.out.println("Ordre ID: " + i);
+                System.out.println("Ordre ID: " + (i+1));
                 System.out.println(getListeAfOrdre().get(i));
                 System.out.println("Samlet pris: " + getListeAfOrdre().get(i).getPris() + "kr.");
-                System.out.println("Ordre ID: " + i);
+                System.out.println(GRØN + "Ordre ID: " + (i+1));
+                System.out.println(RESET + " ");
             }
         }
     }
