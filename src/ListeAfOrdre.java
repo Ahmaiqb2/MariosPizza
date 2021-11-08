@@ -10,8 +10,8 @@ public class ListeAfOrdre {
     ArrayList<Order> listeAfOrdre = new ArrayList<>();
     Menu menu = new Menu();
     Scanner sc = new Scanner(System.in);
-    public static final String GRØN = "\u001B[32m";
-    public static final String RESET = "\u001B[0m";
+    Colors color = new Colors();
+
 
     public ListeAfOrdre() {
     }
@@ -55,6 +55,7 @@ public class ListeAfOrdre {
         System.out.println("Hvornår skal ordren hentes?");
         String pickupTime = sc.nextLine();
         listeAfOrdre.add(new Order(pizzaOrder, pickupTime));
+        System.out.println(color.grøn("Ordre oprettet."));
     }
 
     private Pizza addPizza(String input) {
@@ -80,7 +81,8 @@ public class ListeAfOrdre {
         String order = "";
         boolean finishingOrder = true;
         while (finishingOrder) {
-            System.out.print("Hvilken ordre skal ændres?(see orders): ");
+            System.out.println(" ");
+            System.out.print("Hvilken ordre skal færdiggøres? - type 'see orders' to see orders: ");
             String choice = sc.nextLine();
             if (choice.equalsIgnoreCase("orders")) {
                 printListeAfOrdre();
@@ -93,7 +95,7 @@ public class ListeAfOrdre {
         File file = new File("data/orderHistory.txt");
         PrintStream ps = new PrintStream(new FileOutputStream(file, true));
         ps.println(order);
-        System.out.println("Ordren er færdiggjort og tilføjet til ordrehistoriken");
+        System.out.println(color.gul("Ordren er færdiggjort og tilføjet til ordrehistoriken"));
     }
 
 
@@ -108,8 +110,8 @@ public class ListeAfOrdre {
                 System.out.println("Ordre ID: " + (i+1));
                 System.out.println(getListeAfOrdre().get(i));
                 System.out.println("Samlet pris: " + getListeAfOrdre().get(i).getPris() + "kr.");
-                System.out.println(GRØN + "Ordre ID: " + (i+1));
-                System.out.println(RESET + " ");
+                System.out.println(color.grøn("Ordre ID: " + (i+1)));
+
             }
         }
     }

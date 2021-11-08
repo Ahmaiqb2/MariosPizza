@@ -7,6 +7,7 @@ public class PizzaBar {
     private UserInterface ui = new UserInterface();
     private Menu menu = new Menu();
     private ListeAfOrdre listeAfOrdre = new ListeAfOrdre();
+    Colors color = new Colors();
     //private Order order = new Order();
 
 
@@ -39,7 +40,7 @@ public class PizzaBar {
                     System.out.println("Indtast ordre ID");
                     int remove = sc.nextInt()-1;
                     listeAfOrdre.removeOrder(remove);
-                    System.out.println("Ordre " + (remove+1) + " er fjernet fra ordrelisten");
+                    System.out.println(color.rød("Ordre " + (remove+1) + " er fjernet fra ordrelisten"));
                     break;
                 case 5:
                     try {
