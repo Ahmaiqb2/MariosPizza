@@ -1,4 +1,7 @@
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,40 +13,38 @@ public class ListeAfOrdre {
     public static final String GRØN = "\u001B[32m";
     public static final String RESET = "\u001B[0m";
 
-    public ListeAfOrdre(){
+    public ListeAfOrdre() {
     }
 
-    public void addOrdre(Order order){
+    public void addOrdre(Order order) {
         listeAfOrdre.add(order);
     }
 
-    public void addPizzaOrder(){
+    public void addPizzaOrder() {
         ArrayList<Pizza> pizzaOrder = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("Tilføj pizzaer:");
 
         boolean active = true;
-        while(active){
+        while (active) {
             System.out.print("Indtast pizza nr: ");
             String input = sc.nextLine();
 
-            if(input.equalsIgnoreCase("menu")){
+            if (input.equalsIgnoreCase("menu")) {
                 System.out.println(menu.getPizza());
-            }
-            else if(addPizza(input)==null){
+            } else if (addPizza(input) == null) {
                 System.out.println("Denne pizza findes ikke");
             } else {
                 pizzaOrder.add(addPizza(input));
                 System.out.println("Pizza nummer " + input + " er tilføjet til ordre.");
             }
             boolean choice = true;
-            while(choice) {
+            while (choice) {
                 System.out.println("Vil du tilføje mere? (ja/nej)");
                 String answer = sc.nextLine();
                 if (answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("ja")) {
                     choice = false;
-                }
-                else if (answer.equalsIgnoreCase("no") || answer.equalsIgnoreCase("nej")) {
+                } else if (answer.equalsIgnoreCase("no") || answer.equalsIgnoreCase("nej")) {
                     choice = false;
                     active = false;
                 } else {
@@ -56,23 +57,47 @@ public class ListeAfOrdre {
         listeAfOrdre.add(new Order(pizzaOrder, pickupTime));
     }
 
-    private Pizza addPizza(String input){
+    private Pizza addPizza(String input) {
         int number = Integer.parseInt(input);
-        for(int i = 0; i < menu.getPizza().size(); i++){
-            if(number==menu.getPizza().get(i).getPizzaNummer()){
+        for (int i = 0; i < menu.getPizza().size(); i++) {
+            if (number == menu.getPizza().get(i).getPizzaNummer()) {
                 return menu.getPizza().get(i);
             }
         }
         return null;
     }
 
-    public void removeOrder(int id){
+    public void removeOrder(int id) {
         listeAfOrdre.remove(id);
     }
 
    /* public void finishOrder(Order order) throws FileNotFoundException {
         order.finishOrder();
         removeOrder(id);*/
+
+    public void finishOrder() throws FileNotFoundException {
+        Scanner sc = new Scanner(System.in);
+        String order = "";
+        boolean finishingOrder = true;
+        while (finishingOrder) {
+            System.out.print("Hvilken ordre skal ændres?(see orders): ");
+            String choice = sc.nextLine();
+            if (choice.equalsIgnoreCase("orders")) {
+                printListeAfOrdre();
+            }
+            if(choice.matches("\\d+")){
+                order = listeAfOrdre.get(Integer.parseInt(choice)-1).finishOrder();
+                finishingOrder = false;
+            }
+        }
+        File file = new File("data/orderHistory.txt");
+        PrintStream ps = new PrintStream(new FileOutputStream(file, true));
+        ps.println(order);
+        System.out.println("Ordren er færdiggjort og tilføjet til ordrehistoriken");
+    }
+
+
+
 
 
     public void printListeAfOrdre(){

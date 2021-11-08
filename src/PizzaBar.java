@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class PizzaBar {
@@ -41,7 +42,12 @@ public class PizzaBar {
                     System.out.println("Ordre " + (remove+1) + " er fjernet fra ordrelisten");
                     break;
                 case 5:
-                    //finishorder
+                    try {
+                        listeAfOrdre.finishOrder();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    break;
                 case 6:
                     //statistik
                 case 7:

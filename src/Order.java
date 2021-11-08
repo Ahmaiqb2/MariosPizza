@@ -43,7 +43,7 @@ public class Order {
         return pizzaer;
     }
 
-    public void finishOrder() throws FileNotFoundException {
+    public void finishOrderGammel() throws FileNotFoundException {
         String order = pris + "_Pizzaer: ";
         for(int i = 0; i < pizzaer.size(); i++){
             order += pizzaer.get(i).getPizzaNavn() + ", ";
@@ -52,6 +52,18 @@ public class Order {
         File file = new File("data/orderHistory.txt");
         PrintStream ps = new PrintStream(new FileOutputStream(file, true));
         ps.println(order);
+    }
+
+    public String finishOrder(){
+        String result = "";
+        for(int i = 0; i < pizzaer.size(); i++){
+            result += pizzaer.get(i).getPizzaNummer();
+            if(i < pizzaer.size()-1){
+                result += " ";
+            }
+        }
+        result += "_" + pris;
+        return result;
     }
 
     private String pizzaList(){

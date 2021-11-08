@@ -23,7 +23,8 @@ public class UserInterface {
                     2) Tilføj ordre.
                     3) Se aktive ordrer.
                     4) Fjern ordrer.
-                    5) Afslut programmet.""");
+                    5) Færdiggør ordre.
+                    7) Afslut programmet.""");
     }
 
     public void defaultBesked(){
