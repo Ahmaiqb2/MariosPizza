@@ -8,7 +8,6 @@ public class PizzaBar {
     private Menu menu = new Menu();
     private ListeAfOrdre listeAfOrdre = new ListeAfOrdre();
     Colors color = new Colors();
-    //private Order order = new Order();
 
 
     public void start() {

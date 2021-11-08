@@ -9,16 +9,12 @@ public class ListeAfOrdre {
 
     ArrayList<Order> listeAfOrdre = new ArrayList<>();
     Menu menu = new Menu();
-    Scanner sc = new Scanner(System.in);
     Colors color = new Colors();
 
 
     public ListeAfOrdre() {
     }
 
-    public void addOrdre(Order order) {
-        listeAfOrdre.add(order);
-    }
 
     public void addPizzaOrder() {
         ArrayList<Pizza> pizzaOrder = new ArrayList<>();
@@ -72,10 +68,6 @@ public class ListeAfOrdre {
         listeAfOrdre.remove(id);
     }
 
-   /* public void finishOrder(Order order) throws FileNotFoundException {
-        order.finishOrder();
-        removeOrder(id);*/
-
     public void finishOrder() throws FileNotFoundException {
         Scanner sc = new Scanner(System.in);
         String order = "";
@@ -99,9 +91,6 @@ public class ListeAfOrdre {
     }
 
 
-
-
-
     public void printListeAfOrdre(){
         if (getListeAfOrdre().size() == 0){
             System.out.println("Der er ingen bestillinger");
@@ -115,6 +104,7 @@ public class ListeAfOrdre {
             }
         }
     }
+
 
     public ArrayList<Order> getListeAfOrdre() {
         return listeAfOrdre;

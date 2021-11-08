@@ -1,17 +1,5 @@
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Scanner;
 
 public class UserInterface {
-
-    private UserInterface ui;
-    private Menu menu = new Menu();
-    private ListeAfOrdre listeAfOrdre = new ListeAfOrdre();
-
-    //private PizzaBar application;
-    //public UserInterface(PizzaBar application){
-    //this.application = application;
 
     public void printStartBesked(){
         System.out.println("Velkommen til Marios Pizzabar!");
@@ -31,9 +19,6 @@ public class UserInterface {
         System.out.println("Denne kommando findes ikke");
     }
 
-    public void statistik(){
-
-    }
     public void menuBesked(){
         System.out.println("MENU:");
     }

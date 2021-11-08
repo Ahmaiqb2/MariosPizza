@@ -16,20 +16,8 @@ public class Pizza {
         return pizzaNummer;
     }
 
-    public void setPizzaNavn(String pizzaNavn) {
-        this.pizzaNavn = pizzaNavn;
-    }
-
-    public void setPizzaBeskrivelse(String pizzaBeskrivelse) {
-        this.pizzaBeskrivelse = pizzaBeskrivelse;
-    }
-
     public String getPizzaNavn() {
         return pizzaNavn;
-    }
-
-    public String getPizzaBeskrivelse() {
-        return pizzaBeskrivelse;
     }
 
     public double getPizzaPris() {

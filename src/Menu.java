@@ -5,46 +5,12 @@ import java.util.Scanner;
 
 public class Menu {
     public ArrayList<Pizza> pizza = new ArrayList<>();
-    public ArrayList<Pizza> pizzaMenu = new ArrayList<>();
-    //Pizza 1: Number, 2: Name, 3: ingredients, 4: price
 
     public Menu() {
         menuIndhold();
-        createMenu();
-    }
-
-    public void createMenu() {
-        File file = new File("data/menu.txt");
-        try {
-            Scanner sc = new Scanner(file);
-            while (sc.hasNextLine()) {
-                addPizza(sc.nextLine());
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("oof" + e);
-        }
-    }
-
-    public void getMenu() {
-        for (int i = 0; i < pizza.size(); i++) {
-            System.out.println(pizza.get(i));
-        }
-    }
-
-    private void addPizza(String pizza) {
-        String[] stringList = pizza.split("_");
-        int number = Integer.parseInt(stringList[0]);
-        String name = stringList[1];
-        String ingredients = stringList[2];
-        double price = Double.parseDouble(stringList[3]);
-        pizzaMenu.add(new Pizza(number, name, ingredients, price));
     }
 
     public void menuIndhold() {
-        for (Pizza marios: pizza = new ArrayList<>()) {
-
-        }
-
         Pizza pizza1 = new Pizza(1, "Vesuvio:",
                 "tomatsauce, ost, skinke og oregano", 57);
         Pizza pizza2 = new Pizza(2, "Amerikaner:",

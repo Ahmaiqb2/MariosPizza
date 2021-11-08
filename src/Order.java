@@ -13,7 +13,6 @@ public class Order {
     private ArrayList<Pizza> pizzaer = new ArrayList<>();
     private double pris = 0;
     private String henteTidspunkt;
-    Menu menu = new Menu();
 
     public Order(ArrayList<Pizza> pizzaer, String henteTidspunkt){
         this.pizzaer=pizzaer;
@@ -33,26 +32,6 @@ public class Order {
 
     public double getPris() {
         return pris;
-    }
-
-    public void addPizza(int pizzaNummer){
-        pizzaer.add(menu.getPizza().get(pizzaNummer - 1));
-   }
-
-    public ArrayList<Pizza> getPizzaer() {
-        return pizzaer;
-    }
-
-    public void finishOrderGammel() throws FileNotFoundException {
-        String order = pris + "_Pizzaer: ";
-        for(int i = 0; i < pizzaer.size(); i++){
-            order += pizzaer.get(i).getPizzaNavn() + ", ";
-        }
-        order += pris;
-        File file = new File("data/orderHistory.txt");
-        PrintStream ps = new PrintStream(new FileOutputStream(file, true));
-        ps.println(order);
-        ps.close();
     }
 
     public String finishOrder(){
