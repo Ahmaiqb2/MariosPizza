@@ -52,6 +52,7 @@ public class Order {
         File file = new File("data/orderHistory.txt");
         PrintStream ps = new PrintStream(new FileOutputStream(file, true));
         ps.println(order);
+        ps.close();
     }
 
     public String finishOrder(){
