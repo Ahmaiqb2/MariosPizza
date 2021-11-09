@@ -1,9 +1,9 @@
 public class Farve {
 
 
-    public String farveTekst(String color, String text) {
-        String resetColour = "\u001B[0m";
-        return color + text + resetColour;
+    public String farveTekst(String farve, String tekst) {
+        String nulstilFarve = "\u001B[0m";
+        return farve + tekst + nulstilFarve;
     }
 
     public String grøn(String input) {
