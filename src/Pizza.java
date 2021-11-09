@@ -5,7 +5,7 @@ public class Pizza {
     private String pizzaBeskrivelse;
     private double pizzaPris;
 
-    public Pizza(int pizzaNummer, String pizzaNavn, String pizzaBeskrivelse, double pizzaPris){
+    public Pizza(int pizzaNummer, String pizzaNavn, String pizzaBeskrivelse, double pizzaPris) {
         this.pizzaNummer = pizzaNummer;
         this.pizzaNavn = pizzaNavn;
         this.pizzaBeskrivelse = pizzaBeskrivelse;
@@ -25,7 +25,7 @@ public class Pizza {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return pizzaNummer + " " + pizzaNavn + " " + pizzaBeskrivelse + " " + pizzaPris;
     }
 

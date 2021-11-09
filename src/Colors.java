@@ -1,26 +1,24 @@
 public class Colors {
 
 
+    public String colorText(String color, String text) {
+        String resetColour = "\u001B[0m";
+        return color + text + resetColour;
 
-public String colorText(String color, String text){
-String resetColour = "\u001B[0m";
-return color + text + resetColour;
+    }
 
-}
+    public String grøn(String input) {
+        return GRØN + input + RESET;
 
-public String grøn(String input){
-return GRØN + input + RESET;
+    }
 
-}
+    public String rød(String input) {
+        return red + input + RESET;
+    }
 
-public String rød(String input){
-return red + input + RESET;
-}
-
-public String gul(String input){
-return gul + input + RESET;
-}
-
+    public String gul(String input) {
+        return gul + input + RESET;
+    }
 
 
     public final String GRØN = "\u001B[32m";
