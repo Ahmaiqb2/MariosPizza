@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Menu {
     public ArrayList<Pizza> pizza = new ArrayList<>();
@@ -106,8 +103,8 @@ public class Menu {
     }
 
 
-    public void printMenu(){
-        for (int i = 0; i < pizza.size(); i++){
+    public void printMenu() {
+        for (int i = 0; i < pizza.size(); i++) {
             System.out.println(pizza.get(i));
         }
     }

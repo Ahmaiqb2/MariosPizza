@@ -7,7 +7,7 @@ public class PizzaBar {
     private UserInterface ui = new UserInterface();
     private Menu menu = new Menu();
     private ListeAfOrdre listeAfOrdre = new ListeAfOrdre();
-    Colors color = new Colors();
+    Farve color = new Farve();
 
 
     public void start() {
@@ -28,7 +28,7 @@ public class PizzaBar {
                     menu.printMenu();
                     break;
                 case 2:
-                    listeAfOrdre.addPizzaOrder();
+                    listeAfOrdre.tilføjPizzaOrdre();
                     break;
                 case 3:
                     listeAfOrdre.printListeAfOrdre();
@@ -37,13 +37,13 @@ public class PizzaBar {
                     listeAfOrdre.printListeAfOrdre();
                     System.out.println("\nHvilken ordre skal fjernes?");
                     System.out.println("Indtast ordre ID");
-                    int remove = sc.nextInt()-1;
-                    listeAfOrdre.removeOrder(remove);
-                    System.out.println(color.rød("Ordre " + (remove+1) + " er fjernet fra ordrelisten"));
+                    int remove = sc.nextInt() - 1;
+                    listeAfOrdre.fjernOrdre(remove);
+                    System.out.println(color.rød("Ordre " + (remove + 1) + " er fjernet fra ordrelisten"));
                     break;
                 case 5:
                     try {
-                        listeAfOrdre.finishOrder();
+                        listeAfOrdre.afslutOrdre();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
